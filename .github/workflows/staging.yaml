@@ -28,7 +28,7 @@ jobs:
       with:
         registry: ghcr.io
         username: USERNAME
-        password: ${{ secrets.PAT }}
+        password: ${{ secrets.TOKEN }}
 
     - name: Inject version
       run: echo "ENV APP_VERSION=$GITHUB_SHA" >> languages-app/Dockerfile
