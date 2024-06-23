@@ -38,7 +38,7 @@ spec:
         - name: dockerconfigjson-github-com
       containers:
       - name: languages-app
-        image: ghcr.io/alfiankan/majelis-it-ci-cd-kubernetes-playground:8f1e01b
+        image: ghcr.io/ajitirto/majelis-it-ci-cd-kubernetes-playground:8f1e01b
         ports:
         - containerPort: 3000
         env:

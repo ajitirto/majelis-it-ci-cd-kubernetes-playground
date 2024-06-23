@@ -28,15 +28,15 @@ jobs:
       with:
         registry: ghcr.io
         username: USERNAME
-        password: ${{ secrets.GITUB_PAT }}
+        password: ${{ secrets.GIThUB_PAT }}
 
     - name: Inject version
       run: echo "ENV APP_VERSION=$GITHUB_SHA" >> languages-app/Dockerfile
 
     - name: Build & Push
       run: |
-        docker build -t ghcr.io/alfiankan/${{ github.event.repository.name }}:"$GITHUB_SHA" ./languages-app
-        docker push ghcr.io/alfiankan/${{ github.event.repository.name }}:"$GITHUB_SHA"
+        docker build -t ghcr.io/ajitirto/${{ github.event.repository.name }}:"$GITHUB_SHA" ./languages-app
+        docker push ghcr.io/ajitirto/${{ github.event.repository.name }}:"$GITHUB_SHA"
 
   update_deployment_staging:
     name: Update staging env
